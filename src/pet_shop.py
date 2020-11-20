@@ -28,7 +28,11 @@ def get_pets_by_breed(list,breed):
     return number_of_pets
 
 def find_pet_by_name (list, name):
-    for pet in list['pets']:
-        if pet['name'] == name:
+    for pet in list["pets"]:
+        if pet["name"] == name:
             return pet
 
+def remove_pet_by_name(list,name):
+    for pet in list["pets"]:
+        if pet["name"] == name:
+            list["pets"].remove(pet)
