@@ -19,3 +19,10 @@ def get_stock_count(list):
     for pet in list["pets"]:
         stock_count += 1
     return stock_count
+
+def get_pets_by_breed(list,breed):
+    number_of_pets = []
+    for pet in list["pets"]:
+        if pet ["breed"] == breed:
+            number_of_pets.append(1)
+    return number_of_pets
