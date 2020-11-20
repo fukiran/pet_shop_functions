@@ -13,3 +13,9 @@ def get_pets_sold(list):
 
 def increase_pets_sold(list,number_of_pets_sold):
     list ["admin"]["pets_sold"] += number_of_pets_sold
+
+def get_stock_count(list):
+    stock_count = 0
+    for pet in list["pets"]:
+        stock_count += 1
+    return stock_count
