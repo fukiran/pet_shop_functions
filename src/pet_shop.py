@@ -31,7 +31,7 @@ def find_pet_by_name (list, name):
     for pet in list["pets"]:
         if pet["name"] == name:
             return pet
-
+        
 def remove_pet_by_name(list,name):
     for pet in list["pets"]:
         if pet["name"] == name:
@@ -57,3 +57,14 @@ def customer_can_afford_pet(customer,pet_price):
         return True
     else:
         return False
+
+def sell_pet_to_customer(shop,pet,customer):
+    if not pet:
+        return
+    elif customer["cash"] < pet["price"]:
+        return
+    else:
+        customer["pets"].append(1)
+        shop["admin"]["pets_sold"] += 1
+        customer["cash"] -= pet["price"]
+        shop["admin"]["total_cash"] += pet["price"]
